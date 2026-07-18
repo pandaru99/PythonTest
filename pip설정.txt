@@ -1,0 +1,39 @@
+# pip 버전 확인
+pip --version
+
+# 또는
+python -m pip --version
+
+# 2. 특정 버전 설치
+pip install pykrx==1.0.0
+
+# 3. 여러 개 한 번에 설치
+pip install pykrx pandas requests matplotlib openpyxl
+
+# 4. 업그레이드
+pip install --upgrade pykrx
+pip install --upgrade pip          # pip 자체 업그레이드
+
+# 가상환경 만들기
+python -m venv myenv
+
+# 활성화 (Windows)
+myenv\Scripts\activate
+
+# 활성화 (Mac / Linux)
+source myenv/bin/activate
+
+pip install pykrx pandas openpyxl matplotlib
+
+from pykrx import stock
+print(stock.get_market_ticker_name("005930"))  # 삼성전자 출력되면 성공!
+
+# 활성화 후 pip install 하면 해당 환경에만 설치됨
+
+# 명령어 : 설명
+# pip list : 설치된 패키지 목록 보기
+# pip freeze : requirements.txt 형식으로 출력
+# pip install -r requirements.txt : 파일에 적힌 패키지 모두 설치
+# pip uninstall 패키지이름 : 패키지 삭제
+# pip search 패키지이름 : 패키지 검색 (현재는 제한됨)
+
