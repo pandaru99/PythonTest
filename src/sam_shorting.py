@@ -65,3 +65,8 @@ except Exception as e:
 # stock.get_shorting_balance_by_date(...) : 잔고 중심
 # stock.get_shorting_volume_top50(date) / get_shorting_balance_top50(date) : 상위 종목
 # 필요하면 여러 종목 한번에 조회하거나, 가격 데이터와 함께 병합하는 버전도 만들어드릴게요!
+
+
+
+
+
