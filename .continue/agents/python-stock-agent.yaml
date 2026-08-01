@@ -1,0 +1,15 @@
+name: Python Stock Analysis Agent
+version: 1.0.0
+schema: v1
+
+models:
+  - name: Qwen Coder
+    provider: ollama
+    model: qwen2.5-coder:7b
+    roles:
+      - chat
+      - edit
+      - apply
+      - autocomplete
+    capabilities:
+      - tool_use
