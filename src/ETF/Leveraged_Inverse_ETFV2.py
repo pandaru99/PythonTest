@@ -98,7 +98,6 @@ def get_portfolio_df(selected_ticker: str, selected_date: str, selected_func: st
     safe_date = to_business_day(selected_date)   # ★ 핵심: 항상 직전 영업일 적용
     
     try:
-
         status = selected_func
         match status:
             case "000001":
@@ -200,7 +199,7 @@ def create_ui(initial_df: pd.DataFrame, etf_list: list, date_list: list):
         if etf_names:
             combo_etf.current(0)
 
-    # 2. ETF 콤보박스
+    # 2. ETF 콤보박스 (함수 선택용으로 보임)
     ttk.Label(select_frame, text="② ETF 선택:").grid(row=1, column=0, sticky="w", padx=5)
     func_names = [f"{t} | {n}" for t, n in etf_list]
     combo_func = ttk.Combobox(select_frame, values=func_names, width=75, state="readonly")
